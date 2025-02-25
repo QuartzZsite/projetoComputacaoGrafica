@@ -30,7 +30,7 @@ class Mesh:
             for _ in range(num_triangles):
                 v1, v2, v3 = map(int, f.readline().split())
                 self.triangles.append(Triangle(v1 - 1, v2 - 1, v3 - 1))
-
+#camera
 class Camera:
     def __init__(self):
         self.C = np.array([0, 0, 250])
@@ -110,6 +110,7 @@ def main():
     pygame.display.set_caption('Renderizador Phong')
 
     mesh = Mesh()
+    #objeto
     mesh.load('calice2.byu')
     cam = Camera()
     lighting = Lighting()
